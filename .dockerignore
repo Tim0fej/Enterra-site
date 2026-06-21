@@ -1,0 +1,10 @@
+node_modules
+dist
+data
+.env
+.env.local
+.git
+.vscode
+plugin/target
+*.md
+!DEPLOY.md

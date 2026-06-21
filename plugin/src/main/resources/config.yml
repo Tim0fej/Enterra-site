@@ -1,0 +1,47 @@
+# URL API сайта (без слэша в конце)
+api-url: "http://127.0.0.1:3001"
+
+# Ключ API — должен совпадать с MINECRAFT_API_KEY на сайте
+api-key: "enterra-plugin-key"
+
+# Ссылка на сайт для сообщений игрокам
+website-url: "http://127.0.0.1:3001"
+
+luckperms:
+  enabled: true
+  default-group: "default"
+  role-groups:
+    admin: admin
+    moderator: moder
+  privilege-groups:
+    legend: vip
+    vip: vip
+    youtube: youtube
+    twitch: twitch
+    tiktok: tiktok
+
+auto-sync:
+  enabled: true
+  interval-seconds: 30
+  notify-on-change: true
+
+messages:
+  checking: "&7Проверка аккаунта..."
+  verified-welcome: "&aДобро пожаловать на Enterra!"
+  need-code: |
+    &eДля игры нужно подтвердить аккаунт.
+    &7Зайди на сайт, скопируй код из профиля и введи:
+    &f/code <твой_код>
+  not-registered: |
+    &cТы не зарегистрирован на сайте.
+    &7Зарегистрируйся с ником &f%username%&7:
+    &b%website%/register
+  api-error: "&cСервис авторизации недоступен. Запусти сайт или попробуй позже."
+  code-success: "&aКод принят! Приятной игры."
+  code-invalid: "&cНеверный код. Проверь код в личном кабинете на сайте."
+  code-usage: "&cИспользование: /code <код>"
+  code-checking: "&7Проверка кода..."
+  sync-checking: "&7Синхронизация статуса с сайтом..."
+  sync-success: "&aСтатус обновлён: &f%group%"
+  sync-auto-updated: "&aПривилегия обновлена с сайта: &f%group%"
+  sync-failed: "&cНе удалось синхронизировать статус. Проверь привилегию на сайте."

@@ -1,0 +1,14 @@
+name: EnterraAuth
+version: 2.2.0
+main: ru.enterra.auth.EnterraAuthPlugin
+api-version: '1.21'
+description: Авторизация через сайт Enterra
+depend: [LuckPerms]
+commands:
+  code:
+    description: Ввести код доступа с сайта
+    usage: /code <код>
+    aliases: [verify]
+  privsync:
+    description: Синхронизировать привилегию с сайтом
+    usage: /privsync
