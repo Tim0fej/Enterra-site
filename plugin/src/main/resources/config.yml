@@ -1,0 +1,109 @@
+# URL API сайта (без слэша в конце)
+api-url: "http://127.0.0.1:3001"
+
+# Ключ API — должен совпадать с MINECRAFT_API_KEY на сайте
+api-key: "enterra-plugin-key"
+
+# Ссылка на сайт для сообщений игрокам
+website-url: "http://127.0.0.1:3001"
+
+luckperms:
+  enabled: true
+  default-group: "default"
+  role-groups:
+    admin: admin
+    moderator: moder
+  privilege-groups:
+    legend: vip
+    vip: vip
+    youtube: youtube
+    twitch: twitch
+    tiktok: tiktok
+
+auto-sync:
+  enabled: true
+  interval-seconds: 20
+  notify-on-change: true
+
+session-check:
+  enabled: true
+  interval-seconds: 15
+
+moderation-sync:
+  enabled: true
+  queue-interval-seconds: 5
+  punishments-interval-seconds: 25
+  limit: 150
+
+staff-protection:
+  enabled: true
+  allow-bypass-punish: false
+  groups:
+    - admin
+    - dev
+    - moder
+  site-roles:
+    - admin
+    - moderator
+  moderation-commands:
+    - ban
+    - tempban
+    - ipban
+    - kick
+    - mute
+    - tempmute
+    - warn
+    - punish
+
+pending-auth:
+  blindness: true
+  invulnerable: true
+  no-hunger: true
+  boss-bar: true
+  title-hint: true
+  timeout-seconds: 45
+  reminder-interval-seconds: 8
+
+messages:
+  checking: "&7Проверка аккаунта..."
+  verified-welcome: "&aДобро пожаловать на Enterra!"
+  need-code-box: |
+    &8&m━━━━━━━━━━&r &b&lEnterra &8· &7Авторизация &8&m━━━━━━━━━━
+    &7Код лежит в профиле на сайте:
+    &b%website%/profile
+    &8»
+    &f/code &7<твой_код>
+    &7На ввод: &c%seconds% сек
+    &8&m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  command-blocked: "&cСначала подтверди вход: &f/code &7<код из профиля>"
+  code-timeout: "&cВремя вышло (%seconds% сек). Зайди снова и введи /code."
+  code-reset-kick: "&cКод доступа обновлён на сайте.\n&7Зайди снова и введи &f/code &7с новым кодом из профиля."
+  not-registered: |
+    &cТы не зарегистрирован на сайте.
+    &7Зарегистрируйся с ником &f%username%&7:
+    &b%website%/register
+  multi-account-blocked: |
+    &cОбход бана запрещён.
+    &7С этого IP играл забаненный аккаунт.
+    &7Создание нового аккаунта для обхода бана нарушает правила сервера.
+  multi-account-online: |
+    &cОбход бана запрещён.
+    &7С этого IP играл забаненный аккаунт.
+  maintenance-blocked-default: "Технические работы. Сервер временно недоступен."
+  maintenance-blocked: |
+    &c%message%
+    &7Следи за новостями на сайте.
+  api-error: "&cСервис авторизации недоступен. Запусти сайт или попробуй позже."
+  code-success: "&a&l✓ &aКод принят! &7Приятной игры на Enterra."
+  code-invalid: "&cНеверный код. Проверь код в личном кабинете на сайте."
+  code-usage: "&cИспользование: /code <код>"
+  code-checking: "&7Проверка кода..."
+  sync-checking: "&7Синхронизация с сайтом..."
+  sync-success: "&aСтатус обновлён: &f%group%"
+  sync-auto-updated: "&aПривилегия обновлена с сайта: &f%group%"
+  sync-failed: "&cНе удалось синхронизировать статус. Проверь привилегию на сайте."
+  name-color-applied: "&aЦвет ника обновлён с сайта."
+  name-color-reset: "&7Цвет ника сброшен."
+  staff-protection:
+    blocked: "&cЭтого игрока нельзя кикнуть, забанить или замутить — он в команде администрации."
+    reverted: "&cЭтого игрока нельзя кикнуть, забанить или замутить — он в команде администрации. &7Наказание отменено."

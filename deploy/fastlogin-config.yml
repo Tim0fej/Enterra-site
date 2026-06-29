@@ -1,0 +1,29 @@
+# FastLogin — offline Enterra (online-mode=false)
+# https://github.com/games647/FastLogin
+
+anti-bot:
+  enabled: true
+  connections: 600
+  expire: 10
+  action: 'ignore'
+
+autoRegister: false
+respectIpLimit: false
+# Пират с ником лицензии: после «bad login» пускает как cracked на второй заход
+secondAttemptCracked: true
+switchMode: false
+premiumUuid: false
+nameChangeCheck: false
+forwardSkin: true
+premium-warning: true
+kick-toggle: true
+useProxyAgnosticResolver: true
+mojang-request-limit: 600
+auto-register-unknown: false
+autoLogin: true
+verifyClientKeys: false
+
+driver: 'sqlite'
+database: '{pluginDir}/FastLogin.db'
+
+proxies: []

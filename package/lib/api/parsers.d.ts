@@ -1,0 +1,42 @@
+import { Donation, User } from ".";
+export declare function parseDonation({ id, alert_type, is_shown, additional_data, billing_system, billing_system_type, username, amount, amount_formatted, amount_main, currency, message, header, date_created, emotes, ap_id, _is_test_alert, message_type, preset_id, ...raw }: {
+    id: number;
+    alert_type: number | string;
+    is_shown: null | string;
+    additional_data: null | string;
+    billing_system: null | string;
+    billing_system_type: null | string;
+    username: string;
+    amount: string;
+    amount_formatted: string;
+    amount_main: number;
+    currency: string;
+    message: null | string;
+    header: null | string;
+    date_created: string;
+    emotes: null | string;
+    ap_id: null | number;
+    _is_test_alert: boolean;
+    message_type: null | string;
+    preset_id?: number;
+}): Donation;
+export declare function parseUser({ id, roles, code, name, avatar, email, language, socket_connection_token, timezone, main_currency, token, black_list_words, balances, ...raw }: {
+    id: string;
+    roles: string[];
+    code: string;
+    name: string;
+    avatar: string;
+    email: string;
+    language: string;
+    socket_connection_token: string;
+    timezone: string;
+    main_currency: string;
+    token: string;
+    black_list_words: string[];
+    adv_brands: any[];
+    balances: {
+        balance: number;
+        adv_balance: number;
+        currency: string;
+    }[];
+}): User;

@@ -1,0 +1,20 @@
+name: EnterraAuth
+version: ${project.version}
+main: ru.enterra.auth.EnterraAuthPlugin
+api-version: '1.21'
+description: Авторизация через сайт Enterra
+depend: [LuckPerms]
+commands:
+  code:
+    description: Ввести код доступа с сайта
+    usage: /code <код>
+    aliases: [verify]
+  privsync:
+    description: Синхронизировать привилегию и цвет ника с сайтом
+    usage: /privsync
+softdepend: [LiteBans, Violet-NameFormat, TAB, PlaceholderAPI]
+loadafter: [LiteBans, Violet-NameFormat, TAB, PlaceholderAPI]
+permissions:
+  enterra.staffprotection.bypass:
+    description: Разрешить ban/kick/mute администрации (выключено по умолчанию, см. allow-bypass-punish)
+    default: false

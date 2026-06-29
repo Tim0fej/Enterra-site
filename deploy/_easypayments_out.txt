@@ -1,0 +1,19 @@
+﻿=== plugins/EasyPayments ===
+lang
+config.yml
+logs
+database.db
+=== plugins/EasyPayments/config.yml ===
+python : Traceback (most recent call last):
+C:\Users\romaz\AppData\Local\Temp\ps-script-0194927d-370e-44cb-b54b-84c52f850607.ps1:87 знак:1
++ python "C:\Users\romaz\OneDrive\Desktop\Enterra-site\deploy\read-easy ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\romaz\OneDrive\Desktop\Enterra-site\deploy\read-easypayments.py", line 17, in <module>
+    print(f.read().decode("utf-8", errors="replace")[:6000])
+  File "C:\Users\romaz\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 15-22: character maps to <undefined>

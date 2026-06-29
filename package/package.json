@@ -1,0 +1,63 @@
+{
+  "name": "donationalerts-api",
+  "description": "Internal DonationAlerts API interaction",
+  "keywords": [
+    "da",
+    "daapi",
+    "donationalerts",
+    "donationalerts.ru",
+    "donation",
+    "alerts",
+    "donate",
+    "twitch",
+    "api",
+    "centrifuge",
+    "centrifugo"
+  ],
+  "license": "MIT",
+  "author": "Alex Owl <AlexOwl@protonmail.com> (https://AlexOwl.github.com/)",
+  "homepage": "https://github.com/AlexOwl/donationalerts-api#readme",
+  "repository": "AlexOwl/donationalerts-api",
+  "bugs": {
+    "email": "AlexOwl@protonmail.com",
+    "url": "https://github.com/AlexOwl/donationalerts-api/issues"
+  },
+  "version": "1.1.0",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "clean": "rimraf lib",
+    "prepare": "npm run clean && npm run build",
+    "start": "node lib/index.js",
+    "start:dev": "ts-node src/index.ts",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "@types/socket.io-client": "^1.4.34",
+    "@types/ws": "^7.4.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.12",
+    "centrifuge": "^2.6",
+    "emittery": "^0.10.0",
+    "got": "^11.8",
+    "socket.io-client": "v2-latest",
+    "ws": "^7.4",
+    "xhr2": "^0.2"
+  }
+}

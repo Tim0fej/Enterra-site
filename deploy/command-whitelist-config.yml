@@ -1,0 +1,184 @@
+# CommandWhitelist — enterra.tech
+# Группы = LuckPerms: default, vip, youtube/twitch/tiktok, moder, dev, admin
+# subcommands = ЧЁРНЫЙ СПИСОК (блокирует только перечисленное), см. readme CommandWhitelist
+# Сверка с shared/vipCommands.ts
+messages:
+  prefix: '<#00bfff>КОМАНДЫ <#696969>• '
+  command_denied: <#00bfff><b>Enterra <#696969>• <#fffafa>Эта команда недоступна вашей группе
+  subcommand_denied: <#00bfff><b>Enterra <#696969>• <#fffafa>Эта подкоманда недоступна вашей группе
+  no_permission: <red>У вас нет прав на это действие.
+  no_such_subcommand: <red>Подкоманда с таким именем не найдена.
+  config_reloaded: <yellow>Конфигурация перезагружена.
+  added_to_whitelist: <yellow>Команда <gold>%s <yellow>добавлена для права <gold>%s
+  removed_from_whitelist: <yellow>Команда <gold>%s <yellow>удалена для права <gold>%s
+  group_doesnt_exist: <red>Группа не существует или произошла ошибка
+
+use_protocollib: false
+message_type: CHAT
+
+groups:
+  default:
+    commands:
+      - code
+      - verify
+      - privsync
+      - emote
+      - emotes
+      - voicechat
+      - vc
+      - msg
+      - tell
+      - w
+      - whisper
+      - r
+      - reply
+      - me
+      - say
+      - do
+      - try
+      - roll
+      - ignore
+      - unignore
+      - mail
+      - list
+    subcommands:
+      - help about
+
+  vip:
+    commands:
+      - musicdisc
+      - skin
+      - co
+      - disc
+      - throw
+      - chatcolor
+    subcommands:
+      - musicdisc reload
+      - co rollback
+      - co restore
+      - co purge
+      - co undo
+
+  media:
+    commands:
+      - musicdisc
+      - skin
+      - co
+      - disc
+      - throw
+      - chatcolor
+    subcommands:
+      - musicdisc reload
+      - co rollback
+      - co restore
+      - co purge
+      - co undo
+
+  youtube:
+    commands:
+      - musicdisc
+      - skin
+      - co
+      - disc
+      - throw
+      - chatcolor
+    subcommands:
+      - musicdisc reload
+      - co rollback
+      - co restore
+      - co purge
+      - co undo
+
+  twitch:
+    commands:
+      - musicdisc
+      - skin
+      - co
+      - disc
+      - throw
+      - chatcolor
+    subcommands:
+      - musicdisc reload
+      - co rollback
+      - co restore
+      - co purge
+      - co undo
+
+  tiktok:
+    commands:
+      - musicdisc
+      - skin
+      - co
+      - disc
+      - throw
+      - chatcolor
+    subcommands:
+      - musicdisc reload
+      - co rollback
+      - co restore
+      - co purge
+      - co undo
+
+  moder:
+    commands:
+      - code
+      - verify
+      - privsync
+      - emote
+      - emotes
+      - voicechat
+      - vc
+      - msg
+      - tell
+      - w
+      - whisper
+      - r
+      - reply
+      - me
+      - say
+      - do
+      - try
+      - roll
+      - ignore
+      - unignore
+      - mail
+      - list
+      - musicdisc
+      - skin
+      - co
+      - disc
+      - throw
+      - chatcolor
+      - ban
+      - tempban
+      - unban
+      - mute
+      - tempmute
+      - unmute
+      - warn
+      - unwarn
+      - kick
+      - history
+      - staffhistory
+      - checkban
+      - checkmute
+      - checkwarn
+      - banlist
+      - mutelist
+      - warnlist
+      - tp
+      - tphere
+    subcommands:
+      - musicdisc reload
+      - co rollback
+      - co restore
+      - co purge
+      - co undo
+
+  dev:
+    commands: []
+    subcommands: []
+
+  admin:
+    commands: []
+    subcommands: []

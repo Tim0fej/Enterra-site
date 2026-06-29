@@ -1,0 +1,105 @@
+# Конфигурация SAutoRestart
+# Плагин для автоматического перезапуска сервера
+
+# Расписание перезапуска
+schedule:
+  # Включить автоматический перезапуск?
+  enabled: true
+  # Перезапуск по фиксированному расписанию (МСК)
+  fixed-time:
+    enabled: true
+    times:
+      - "00:00"
+  # Перезапуск по интервалу (в часах)
+  interval:
+    enabled: false
+    hours: 12
+
+# Настройки сохранения мира
+world-save:
+  # Включить автоматическое сохранение мира перед рестартом?
+  enabled: true
+  # Время в секундах до рестарта для сохранения мира
+  time: 15
+  # Сообщение об успешном сохранении
+  success-message-time: 3
+
+# Настройки отключения игроков
+player-kick:
+  # Сообщение при отключении игроков
+  message: "&x&6&E&9&7&F&FСервер перезагружается"
+
+# Сообщения
+messages:
+  prefix: "&f[&x&6&E&9&7&F&FEɴᴛᴇʀʀᴀ&f] "
+  restart-countdown: "&fСервер перезапустится через &x&6&E&9&7&F&F{time}&f!"
+  restart-now: "&fСервер перезапускается!"
+  restart-manual-confirm: "&fВведите команду еще раз для подтверждения перезапуска."
+  restart-scheduled: "&fПерезапуск запланирован через &x&6&E&9&7&F&F{time}&f!"
+  restart-delayed: "&fРасписание перезапуска обновлено!"
+  restart-time-info: "&fДо перезапуска осталось: &x&6&E&9&7&F&F{time}&f"
+  # Новые сообщения для безопасности
+  safety-warning: "&fДо перезапуска &x&6&E&9&7&F&F15 секунд&f! Пожалуйста, &x&6&E&9&7&F&Fвстаньте в безопасное место&f."
+  safety-urgent: "&fДо перезапуска &x&6&E&9&7&F&F10 секунд&f! &x&6&E&9&7&F&FНемедленно встаньте в безопасное место&f!"
+  # Сообщения для сохранения мира
+  world-saving: "&fСохранение мира перед перезапуском..."
+  world-saved: "&fМир успешно сохранен!"
+
+# Настройки объявлений
+announcements:
+  # Включить вывод в чат?
+  chat:
+    enabled: true
+    times: [60, 30, 15, 10, 5, 4, 3, 2, 1]
+  
+  # Включить заголовки на экране?
+  title:
+    enabled: true
+    times: [60, 30, 15, 10, 5, 4, 3, 2, 1]
+    fade-in: 10
+    stay: 40
+    fade-out: 10
+    
+  # Включить подзаголовки на экране?
+  subtitle:
+    enabled: true
+    times: [60, 30, 15, 10, 5, 4, 3, 2, 1]
+    
+  # Включить звуковые оповещения?
+  sound:
+    enabled: true
+    times: [60, 30, 15, 10, 5, 4, 3, 2, 1]
+    type: "ENTITY_EXPERIENCE_ORB_PICKUP" # Стандартный звук
+    volume: 1.0
+    pitch: 1.0
+    # Для перезапуска можно указать отдельный звук
+    restart-sound:
+      type: "ENTITY_PLAYER_LEVELUP"
+      volume: 1.0
+      pitch: 1.0
+    # Звук для предупреждения о безопасности
+    safety-warning:
+      type: "BLOCK_NOTE_BLOCK_PLING"
+      volume: 1.0
+      pitch: 1.0
+      
+  # Настройки предупреждений о безопасности
+  safety:
+    # Настройки заголовков предупреждений
+    title:
+      fade-in: 5  # Быстрее появляется
+      stay: 50    # Дольше остается на экране
+      fade-out: 5 # Быстрее исчезает
+    # Стили для сообщений
+    styles:
+      warning: "&x&F&F&D&F&0&0" # Желтый цвет для первого предупреждения
+      urgent: "&x&F&F&5&5&5&5"  # Красный цвет для срочного предупреждения
+
+# Права (LuckPerms)
+permissions:
+  command-base: "autorestart.command"
+  command-now: "autorestart.command.now"
+  command-time: "autorestart.command.time"
+  command-delay: "autorestart.command.delay"
+  reload: "autorestart.reload"
+  bypass-restart: "autorestart.bypass" 
